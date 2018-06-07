@@ -42,6 +42,12 @@ Resources:
                     Properties:
                         Path: /bookshelf
                         Method: get
+                NewBooks:
+                    Type: Api
+                    Properties:
+                        Path: /bookshelf/new
+                        Method: post
+
 
 
 Outputs:

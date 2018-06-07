@@ -3,7 +3,8 @@ let response;
 
 var dynamoOpt = {
   apiVersion: '2012-08-10',
-  endpoint: "http://192.168.20.106:8000"
+  // endpoint: "http://192.168.20.106:8000"
+  endpoint: "http://192.168.1.3:8000"
 };
 var documentClient = new AWS.DynamoDB.DocumentClient(dynamoOpt);
 
@@ -18,6 +19,21 @@ exports.lambda_handler = (event, context, callback) => {
           response = {
             "statusCode": 200,
             "body": JSON.stringify(data.Items)
+          }
+          callback(null, response);
+          return;
+        })
+        break;
+      case "POST":
+
+        var params = {
+          TableName: "Books",
+          Item: JSON.parse(event.body)
+        }
+        documentClient.put(params, (err, data) => {
+          response = {
+            "statusCode": 200,
+            "body": JSON.stringify(data)
           }
           callback(null, response);
           return;
