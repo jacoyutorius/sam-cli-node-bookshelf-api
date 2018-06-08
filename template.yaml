@@ -47,7 +47,16 @@ Resources:
                     Properties:
                         Path: /bookshelf/new
                         Method: post
-
+                UpdateBook:
+                    Type: Api
+                    Properties:
+                        Path: /bookshelf/update
+                        Method: put
+                DeleteBook:
+                    Type: Api
+                    Properties: 
+                        Path: "/bookshelf"
+                        Method: delete
 
 
 Outputs:

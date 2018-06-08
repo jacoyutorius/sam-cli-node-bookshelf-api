@@ -1,12 +1,12 @@
 {
-    "body": "{ \"title\": \"this is new Book 4\", \"category\": \"テクノロジー\"}",
-    "httpMethod": "POST",
+    "body": "{ \"title\": \"this is new Book 4\", \"category\" : \"テクノロジー\"}",
+    "httpMethod": "DELETE",
     "resource": "/{proxy+}",
     "queryStringParameters": {
         "foo": "bar"
     },
     "requestContext": {
-        "httpMethod": "POST",
+        "httpMethod": "DELETE",
         "requestId": "c6af9ac6-7b61-11e6-9a41-93e8deadbeef",
         "path": "/{proxy+}",
         "extendedRequestId": null,
@@ -51,7 +51,9 @@
     "stageVariables": null,
     "path": "/examplepath",
     "pathParameters": {
-        "proxy": "/examplepath"
+        "proxy": "/examplepath",
+        "resourceTitle": "this is new Book 4",
+        "resourceCategory": "テクノロジー"
     },
     "isBase64Encoded": false
 }

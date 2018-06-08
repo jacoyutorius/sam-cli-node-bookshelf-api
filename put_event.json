@@ -1,12 +1,12 @@
 {
-    "body": "{ \"title\": \"this is new Book 4\", \"category\": \"テクノロジー\"}",
-    "httpMethod": "POST",
+    "body": "{ \"title\": \"海辺のカフカ\", \"author\": \"村上春樹\"}",
+    "httpMethod": "PUT",
     "resource": "/{proxy+}",
     "queryStringParameters": {
         "foo": "bar"
     },
     "requestContext": {
-        "httpMethod": "POST",
+        "httpMethod": "PUT",
         "requestId": "c6af9ac6-7b61-11e6-9a41-93e8deadbeef",
         "path": "/{proxy+}",
         "extendedRequestId": null,
